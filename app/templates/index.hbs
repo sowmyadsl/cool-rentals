@@ -1,6 +1,13 @@
 <h1> Welcome to Cool Rentals </h1>
 <h3> these rentals are pretty cool!! </h3>
-{{outlet}}
+
+<ul>
+  {{#each model as |rental|}}
+    {{rental-tile rental=rental destroyRental='destroyRental'}}
+  {{/each}}
+</ul>
+
+{{new-rental saveRental2="saveRental3"}}
 
 {{#link-to 'about'}}About{{/link-to}}
 {{#link-to 'contact'}}Click here to contact us.{{/link-to}}
