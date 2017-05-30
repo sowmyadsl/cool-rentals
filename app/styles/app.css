@@ -1,0 +1,20 @@
+.announcement {
+  font-size: 50px;
+  background-color: lightblue;
+  text-align: center;
+  padding: 20px;
+}
+
+.blink_me {
+  animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {
+  50% { opacity: 0; }
+}
+
+.jumbotron{
+  background-image: url('https://static.tacdn.com/img2/vacationrentals/lander/premierGeos/003-south-carolina-vacation-rentals.jpg');
+  color: #fff;
+  background-size: 100%;
+}

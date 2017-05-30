@@ -1,13 +1,37 @@
-<h1> Welcome to Cool Rentals </h1>
+<div class="jumbotron ">
+<h1 class = "blink_me">COOL RENTALS</h1>
+</div>
+<div class="announcement">
+  <h4>
+    {{#each model.announcements as |announcement|}}
+    <marquee>{{announcement.text}}</marquee>
+    {{/each}}
+</h4>
+</div>
 <h3> these rentals are pretty cool!! </h3>
 
+<br>
+
 <ul>
-  {{#each model as |rental|}}
+  {{#each model.rentals as |rental|}}
     {{rental-tile rental=rental destroyRental='destroyRental'}}
   {{/each}}
 </ul>
 
 {{new-rental saveRental2="saveRental3"}}
+
+
+
+
+<hr>
+
+<ul>
+  {{#each model.announcements as |announcement|}}
+    {{announcement-tile announcement=announcement destroyAnnouncement='destroyAnnouncement'}}
+  {{/each}}
+</ul>
+
+{{new-announcement saveAnnouncement2="saveAnnouncement3"}}
 
 {{#link-to 'about'}}About{{/link-to}}
 {{#link-to 'contact'}}Click here to contact us.{{/link-to}}
